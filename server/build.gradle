@@ -58,14 +58,16 @@ compileKotlin {
 	kotlinOptions {
 	    jvmTarget = '1.8' 
 	    //Will retain parameter names for Java reflection
-	    javaParameters = true 
+	    javaParameters = true
+        freeCompilerArgs = ["-Xjsr305=strict"]
 	}
 }
 
 compileTestKotlin {
 	kotlinOptions {
 	    jvmTarget = '1.8' 
-	    javaParameters = true 
+	    javaParameters = true
+        freeCompilerArgs = ["-Xjsr305=strict"]
 	}
 }
 
