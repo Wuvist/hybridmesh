@@ -1,4 +1,4 @@
-package cordova-plugin-flutterlink;
+package com.blogwind.flutterlink;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
