@@ -24,3 +24,10 @@ cd server
 cd client
 cordova run browser
 ```
+
+### web
+
+```bash
+cd client
+cordova run android
+```
