@@ -6,6 +6,6 @@ demoApp.controller("LoginCtrl", function() {
 });
 
 function openFlutter() {
-    var exec = _require('cordova/exec');
+    var exec = cordova.require('cordova/exec');
     exec(null, null, 'FlutterLink', 'openFlutter', [""]);
 }

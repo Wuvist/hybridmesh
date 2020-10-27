@@ -1931,5 +1931,5 @@ utils.alert = function (msg) {
 window.cordova = require('cordova');
 // file: src/scripts/bootstrap.js
 require('cordova/init');
-window._require = require;
+
 })();

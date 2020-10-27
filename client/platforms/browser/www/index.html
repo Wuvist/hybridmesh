@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -43,7 +43,8 @@
         <div class="app" ng-controller="LoginCtrl as login">
             <h1>Hello {{login.name}}</h1>
             <div class="col-xs-12">
-                <input type="text" class="form-control input-lg" name="name" ng-model="login.name" />
+                <input type="text" class="form-control input-lg" name="username" ng-model="login.name" />
+                <input type="button" onclick='openFlutter("")' value="open flutter" />
             </div>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
