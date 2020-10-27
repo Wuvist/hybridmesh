@@ -13,7 +13,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"FlutterLink\"><param name=\"android-package\" value=\"cordova-plugin-flutterlink.FlutterLink\" /></feature>",
+              "xml": "<feature name=\"FlutterLink\"><param name=\"android-package\" value=\"com.blogwind.flutterlink.FlutterLink\" /></feature>",
               "count": 1
             }
           ]
