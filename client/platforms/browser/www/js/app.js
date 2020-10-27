@@ -1,11 +1,10 @@
 var demoApp = angular.module("DemoApp", []);
 console.log(demoApp);
-demoApp.controller("LoginCtrl", function() {
-    var $scope = this;
+demoApp.controller("LoginCtrl", ['$scope', function($scope) {
     $scope.name = "World";
-});
 
-function openFlutter() {
-    var exec = cordova.require('cordova/exec');
-    exec(null, null, 'FlutterLink', 'openFlutter', [""]);
-}
+    $scope.openFlutter = function() {
+        var exec = cordova.require('cordova/exec');
+        exec(null, null, 'FlutterLink', 'openFlutter', [""]);
+    };
+}]);

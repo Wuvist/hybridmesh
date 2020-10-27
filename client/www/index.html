@@ -44,7 +44,7 @@
             <h1>Hello {{login.name}}</h1>
             <div class="col-xs-12">
                 <input type="text" class="form-control input-lg" name="username" ng-model="login.name" />
-                <input type="button" onclick='openFlutter("")' value="open flutter" />
+                <input type="button" ng-click='openFlutter()' value="open flutter" />
             </div>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
