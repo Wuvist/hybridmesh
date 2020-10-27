@@ -21,4 +21,7 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <feature name="FlutterLink">
+        <param name="android-package" value="cordova-plugin-flutterlink.FlutterLink" />
+    </feature>
 </widget>

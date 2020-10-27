@@ -1,0 +1,10 @@
+{
+  "cordova-plugin-flutterlink": {
+    "source": {
+      "type": "local",
+      "path": "C:\\Users\\wuvis\\code\\fe\\hybridmesh\\client\\platforms\\android\\node_modules\\cordova-plugin-flutterlink"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
