@@ -1,7 +1,6 @@
 package com.blogwind.flutterlink;
 
 import android.app.Activity;
-import android.content.Context;
 
 import com.blogwind.hybridmesh.FlutterMainActivity;
 
@@ -17,7 +16,7 @@ import org.json.JSONException;
 public class FlutterLink extends CordovaPlugin {
     public static Activity cordovaActivity;
 
-    public static void setCordovaActivity(Activity  context) {
+    public static void setCordovaActivity(Activity context) {
         cordovaActivity = context;
     }
 
@@ -32,7 +31,7 @@ public class FlutterLink extends CordovaPlugin {
     }
 
     private void openFlutter(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
+        if (message != null) {
             cordovaActivity.startActivity(
                     FlutterMainActivity.withCachedEngine("my_engine_id").build(cordovaActivity)
             );
