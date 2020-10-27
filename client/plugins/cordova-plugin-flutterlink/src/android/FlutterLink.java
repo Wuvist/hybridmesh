@@ -1,16 +1,25 @@
 package com.blogwind.flutterlink;
 
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CallbackContext;
+import android.app.Activity;
+import android.content.Context;
 
+import com.blogwind.hybridmesh.FlutterMainActivity;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
+
 
 /**
  * This class echoes a string called from JavaScript.
  */
 public class FlutterLink extends CordovaPlugin {
+    public static Activity cordovaActivity;
+
+    public static void setCordovaActivity(Activity  context) {
+        cordovaActivity = context;
+    }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -24,7 +33,10 @@ public class FlutterLink extends CordovaPlugin {
 
     private void openFlutter(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
-            callbackContext.success(message);
+            cordovaActivity.startActivity(
+                    FlutterMainActivity.withCachedEngine("my_engine_id").build(cordovaActivity)
+            );
+            callbackContext.success();
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
